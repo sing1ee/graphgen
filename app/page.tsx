@@ -16,7 +16,9 @@ import { Settings } from "lucide-react";
 
 export default function Home() {
     const [text, setText] = useState("");
-    const [instruction, setInstruction] = useState("");
+    const [instruction, setInstruction] = useState(
+        `分析输入文本，执行以下任务： 1. 提取所有实体（明确和隐含的） 2. 识别实体间的关系（包括推断的潜在关系，标注"?"） 3. 突出显示关键实体 4. 分析核心矛盾和关键问题 5. 保持输入和输出语言一致 6. 生成美化的 mermaid 图表，包括 subgraph 7. 最后反思可能遗漏的实体和关系  目标是全面呈现事件全貌，便于理解和分析。`
+    );
     const [aiSuggestions, setAiSuggestions] = useState("");
     const [graphDefinition, setGraphDefinition] = useState(
         "graph TD\nA[Client] --> B[Load Balancer]\nB --> C[Server01]\nB --> D[Server02]"
