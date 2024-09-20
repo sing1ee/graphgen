@@ -69,8 +69,7 @@ This project is a Next.js application that generates Mermaid graphs based on use
         - Text: "Create a flowchart for making coffee"
         - Instruction: "Use simple steps and include decision points"
 
-        ```mermaid
-
+    ```mermaid
     graph TD
     A[Start] --> B[Check if coffee maker is clean]
     B --> C{Is it clean?}
@@ -90,6 +89,7 @@ This project is a Next.js application that generates Mermaid graphs based on use
     M -->|Yes| O[Add cream/sugar/etc.]
     O --> N
     N --> P[End]
+    ```
 
 ````
 
