@@ -10,7 +10,7 @@ const MermaidGraph: React.FC<MermaidGraphProps> = ({ graphDefinition }) => {
     const mermaidRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (mermaidRef.current) {
+        if (mermaidRef.current && graphDefinition) {
             mermaid.initialize({ startOnLoad: true });
             mermaid
                 .render("mermaid-graph", graphDefinition)
