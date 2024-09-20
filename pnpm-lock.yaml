@@ -23,14 +23,17 @@ importers:
       lucide-react:
         specifier: ^0.441.0
         version: 0.441.0(react@18.3.1)
+      mermaid:
+        specifier: ^11.2.1
+        version: 11.2.1
       next:
         specifier: 14.2.13
         version: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       tailwind-merge:
         specifier: ^2.5.2
@@ -39,32 +42,29 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.12)
     devDependencies:
-      '@types/mermaid':
-        specifier: ^9.2.0
-        version: 9.2.0
       '@types/node':
-        specifier: ^20
+        specifier: ^20.16.5
         version: 20.16.5
       '@types/react':
-        specifier: ^18
+        specifier: ^18.3.8
         version: 18.3.8
       '@types/react-dom':
-        specifier: ^18
+        specifier: ^18.3.0
         version: 18.3.0
       eslint:
-        specifier: ^8
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-config-next:
         specifier: 14.2.13
         version: 14.2.13(eslint@8.57.1)(typescript@5.6.2)
       postcss:
-        specifier: ^8
+        specifier: ^8.4.47
         version: 8.4.47
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.12
         version: 3.4.12
       typescript:
-        specifier: ^5
+        specifier: ^5.6.2
         version: 5.6.2
 
 packages:
@@ -280,10 +280,6 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
-
-  '@types/mermaid@9.2.0':
-    resolution: {integrity: sha512-AlvLWYer6u4BkO4QzMkHo0t9RkvVIgqggVZmO+5snUiuX2caTKqtdqygX6GeE1VQa/TnXw9WoH0spcmHtG0inQ==}
-    deprecated: This is a stub types definition. mermaid provides its own type definitions, so you do not need this installed.
 
   '@types/node@20.16.5':
     resolution: {integrity: sha512-VwYCweNo3ERajwy0IUlqqcyZ8/A7Zwa9ZP3MnENWcB11AejO+tLy3pu850goUW2FC/IJMdZUfKpX/yxL1gymCA==}
@@ -2140,12 +2136,6 @@ snapshots:
       tslib: 2.7.0
 
   '@types/json5@0.0.29': {}
-
-  '@types/mermaid@9.2.0':
-    dependencies:
-      mermaid: 11.2.1
-    transitivePeerDependencies:
-      - supports-color
 
   '@types/node@20.16.5':
     dependencies:

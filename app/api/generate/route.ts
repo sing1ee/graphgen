@@ -28,6 +28,7 @@ export async function POST(req: NextRequest) {
                 { role: 'user', content: `Text: ${text}\nInstruction: ${instruction}\nGenerate a Mermaid graph definition based on the given text and instruction.` }
             ],
             stream: true,
+            temperature: 0.7
         });
 
         const encoder = new TextEncoder();

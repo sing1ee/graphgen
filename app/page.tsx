@@ -27,6 +27,7 @@ export default function Home() {
         baseUrl: "",
         model: "",
     });
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
     useEffect(() => {
         const savedApiKey = localStorage.getItem("apiKey") || "";
@@ -107,12 +108,13 @@ export default function Home() {
             baseUrl: savedBaseUrl,
             model: savedModel,
         });
+        setIsSettingsOpen(false);
     };
 
     return (
         <div className="flex h-screen p-4 relative">
             <div className="absolute top-4 right-4">
-                <Popover>
+                <Popover open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
                     <PopoverTrigger asChild>
                         <Button variant="outline" size="icon">
                             <Settings className="h-4 w-4" />
