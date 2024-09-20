@@ -1,4 +1,5 @@
 import React from "react";
+import { Input } from "@/components/ui/input";
 
 interface InstructionInputProps {
     value: string;
@@ -10,9 +11,8 @@ const InstructionInput: React.FC<InstructionInputProps> = ({
     onChange,
 }) => {
     return (
-        <input
+        <Input
             type="text"
-            className="w-full p-2 border rounded"
             placeholder="Enter instructions here..."
             value={value}
             onChange={(e) => onChange(e.target.value)}

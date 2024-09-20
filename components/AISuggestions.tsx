@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface AISuggestionsProps {
     suggestions: string;
@@ -6,10 +7,14 @@ interface AISuggestionsProps {
 
 const AISuggestions: React.FC<AISuggestionsProps> = ({ suggestions }) => {
     return (
-        <div className="w-full h-full p-2 border rounded overflow-auto">
-            <h2 className="font-bold mb-2">AI Suggestions</h2>
-            <pre className="whitespace-pre-wrap">{suggestions}</pre>
-        </div>
+        <Card className="h-full">
+            <CardHeader>
+                <CardTitle>AI Suggestions</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <pre className="whitespace-pre-wrap">{suggestions}</pre>
+            </CardContent>
+        </Card>
     );
 };
 

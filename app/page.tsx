@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import TextInput from "../components/TextInput";
-import InstructionInput from "../components/InstructionInput";
-import AISuggestions from "../components/AISuggestions";
-import MermaidGraph from "../components/MermaidGraph";
+import TextInput from "@/components/TextInput";
+import InstructionInput from "@/components/InstructionInput";
+import AISuggestions from "@/components/AISuggestions";
+import MermaidGraph from "@/components/MermaidGraph";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
     const [text, setText] = useState("");
@@ -24,28 +25,21 @@ export default function Home() {
     };
 
     return (
-        <div className="flex h-screen">
-            <div className="w-1/2 p-4 flex flex-col">
-                <div className="h-1/3 mb-4">
+        <div className="flex h-screen p-4">
+            <div className="w-1/2 pr-2 flex flex-col space-y-4">
+                <div className="flex-grow">
                     <TextInput value={text} onChange={setText} />
                 </div>
-                <div className="mb-4">
-                    <InstructionInput
-                        value={instruction}
-                        onChange={setInstruction}
-                    />
-                </div>
-                <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
-                    onClick={handleGenerateGraph}
-                >
-                    Generate Graph
-                </button>
+                <InstructionInput
+                    value={instruction}
+                    onChange={setInstruction}
+                />
+                <Button onClick={handleGenerateGraph}>Generate Graph</Button>
                 <div className="flex-grow">
                     <AISuggestions suggestions={aiSuggestions} />
                 </div>
             </div>
-            <div className="w-1/2 p-4 border-l">
+            <div className="w-1/2 pl-2">
                 <MermaidGraph graphDefinition={graphDefinition} />
             </div>
         </div>

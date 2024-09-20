@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import mermaid from "mermaid";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface MermaidGraphProps {
     graphDefinition: string;
@@ -22,10 +23,14 @@ const MermaidGraph: React.FC<MermaidGraphProps> = ({ graphDefinition }) => {
     }, [graphDefinition]);
 
     return (
-        <div className="w-full h-full border rounded overflow-auto">
-            <h2 className="font-bold mb-2 p-2">Knowledge Graph</h2>
-            <div ref={mermaidRef} className="p-2" />
-        </div>
+        <Card className="h-full">
+            <CardHeader>
+                <CardTitle>Knowledge Graph</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div ref={mermaidRef} className="w-full h-full overflow-auto" />
+            </CardContent>
+        </Card>
     );
 };
 
