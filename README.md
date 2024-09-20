@@ -32,19 +32,13 @@ This project is a Next.js application that generates Mermaid graphs based on use
     pnpm install
     ```
 
-3. Create a `.env.local` file in the root directory and add your OpenAI API key:
-
-    ```
-    OPENAI_API_KEY=your_api_key_here
-    ```
-
-4. Start the development server:
+3. Start the development server:
 
     ```bash
     pnpm dev
     ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Usage
 
