@@ -22,8 +22,8 @@ This project is a Next.js application that generates Mermaid graphs based on use
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/graph-generator.git
-    cd graph-generator
+    git clone https://github.com/sing1ee/graphgen.git
+    cd graphgen
     ```
 
 2. Install dependencies:
